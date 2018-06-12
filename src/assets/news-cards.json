@@ -1,0 +1,25 @@
+{
+	"result": [
+		{
+			"image": "http://appseed.io.s3.amazonaws.com/mobile-apps/barebone-ionic-2/news-cards-image-1.jpg",
+			"title": "Improving the Conversation Between Strategists & Developers",
+      "category": "COMMUNICATION",
+      "date": "NOV 07, 2016",
+			"body": "Getting meaningful conversations between strategist and developers on your team. Getting meaningful conversations between strategist and developers on your team. Getting meaningful conversations between strategist and developers on your team."
+		},
+		{
+			"image": "http://appseed.io.s3.amazonaws.com/mobile-apps/barebone-ionic-2/news-cards-image-2.jpg",
+			"title": "Agencies, Product, and the Business of Building for People",
+      "category": "HUMAN RESOURCES",
+      "date": "NOV 06, 2016",
+			"body": "Lessons learned in building a company that creates for clients and products. Lessons learned in building a company that creates for clients and products. Lessons learned in building a company that creates for clients and products."
+		},
+		{
+			"image": "http://appseed.io.s3.amazonaws.com/mobile-apps/barebone-ionic-2/news-cards-image-3.jpg",
+			"title": "Recruiting Engineers Who Aren’t Scared to Talk to People",
+      "category": "BUSINESS",
+      "date": "OCT 07, 2016",
+			"body": "How we approach recruiting exceptional engineers who can build product, talk to clients, and present in public. How we approach recruiting exceptional engineers who can build product, talk to clients, and present in public."
+		}
+	]
+}

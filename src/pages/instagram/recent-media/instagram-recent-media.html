@@ -1,0 +1,39 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Recent media</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-refresher (ionRefresh)="doRefresh($event)">
+		<ion-refresher-content
+			pullingIcon="arrow-dropdown"
+			pullingText="Pull to refresh"
+			refreshingSpinner="circles"
+			refreshingText="Refreshing...">
+		</ion-refresher-content>
+	</ion-refresher>
+
+	<ion-card *ngFor="let media of mediaList">
+		<ion-item>
+			<ion-avatar item-left>
+				<img src="{{media.user.profile_picture}}">
+			</ion-avatar>
+			<h2>{{media.user.full_name || media.user.username}}</h2>
+			<p *ngIf="media.location">{{media.location.name}}</p>
+		</ion-item>
+		<img src="{{media.images.standard_resolution.url}}">
+		<ion-row>
+			<button ion-button icon-left clear small>
+				<ion-icon name="thumbs-up"></ion-icon>
+				<div>{{media.likes.count}} {{media.likes.count == 1 ? 'like' : 'likes'}}</div>
+			</button>
+		</ion-row>
+		<ion-card-content>
+			<p>{{media.caption?.text}}</p>
+		</ion-card-content>
+	</ion-card>
+</ion-content>

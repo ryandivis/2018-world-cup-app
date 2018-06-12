@@ -1,0 +1,19 @@
+page-angular-calendar {
+	h3 {
+		text-align: center;
+	}
+
+	.cal-month-view {
+		.cal-day-cell {
+			min-height: 60px;
+		}
+
+		.cal-day-badge {
+			display: none;
+		}
+
+		.cal-cell-top {
+			min-height: 60px;
+		}
+	}
+}

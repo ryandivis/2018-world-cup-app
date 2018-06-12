@@ -1,0 +1,56 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Tumblr</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-card *ngFor="let entry of entries">
+		<ion-card-header>
+			{{entry.type}}
+			<p style="float: right;">{{entry.date | date}}</p>
+		</ion-card-header>
+		<ion-card-content [ngSwitch]="entry.type">
+			<div *ngSwitchCase="'photo'">
+				<img [src]="entry.photos[0].original_size.url">
+				<div padding-vertical="">
+					<p [innerHtml]="entry.caption"></p>
+				</div>
+			</div>
+
+			<div *ngSwitchCase="'answer'">
+				<p style="font-weight: bold;" margin-bottom [innerHtml]="entry.question"></p>
+				<p margin-vertical [innerHtml]="entry.answer"></p>
+			</div>
+
+			<div *ngSwitchCase="'text'">
+				<h4>{{entry.title}}</h4>
+				<p [innerHtml]="entry.body"></p>
+			</div>
+
+			<div *ngSwitchCase="'quote'">
+				<h4>{{entry.text}}</h4>
+			</div>
+
+			<div *ngSwitchCase="'link'">
+				<h4>{{entry.title}}</h4>
+				<p [innerHtml]="entry.description"></p>
+			</div>
+
+			<div *ngSwitchCase="'chat'">
+				<h4>{{entry.title}}</h4>
+				<p [innerHtml]="entry.body"></p>
+			</div>
+
+			<div *ngSwitchCase="'audio'">
+				<p [innerHtml]="entry.caption"></p>
+			</div>
+
+			<div *ngSwitchCase="'video'">
+				<p [innerHtml]="entry.caption"></p>
+			</div>
+
+			<a (click)="goToPost(entry)">Read more</a>
+		</ion-card-content>
+	</ion-card>
+</ion-content>

@@ -1,0 +1,23 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>RSS</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-card *ngFor="let entry of entries">
+		<ion-card-header>
+			{{entry.title}}
+		</ion-card-header>
+		<ion-card-content>
+			<p class="postby">
+				<span>{{entry.publishedDate | localDate}}</span> - <span>{{entry.author}}</span>
+			</p>
+			<p [innerHtml]="entry.contentSnippet"></p>
+			<a (click)="goToArticle(entry.hash)">
+				<ion-icon name="arrow-round-forward"></ion-icon>
+				Read more
+			</a>
+		</ion-card-content>
+	</ion-card>
+</ion-content>

@@ -1,0 +1,28 @@
+{
+	"result": [
+		{
+      "image": "http://appseed.io.s3.amazonaws.com/mobile-apps/barebone-ionic-2/real-estate-minimal-image-1.jpeg",
+      "title": "Concrete and glass",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue libero, tempus in dolor quis, blandit eleifend lectus. Nulla eleifend ex ac ex scelerisque viverra. Aenean fringilla pharetra justo.",
+      "category": "Apartments"
+		},
+    {
+      "image": "http://appseed.io.s3.amazonaws.com/mobile-apps/barebone-ionic-2/real-estate-minimal-image-2.jpg",
+      "title": "Minimal industrial lounge",
+      "description": "Sed congue sollicitudin turpis in pharetra. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas interdum hendrerit nisl vitae auctor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+      "category": "Industrial"
+		},
+    {
+      "image": "http://appseed.io.s3.amazonaws.com/mobile-apps/barebone-ionic-2/real-estate-minimal-image-3.jpg",
+      "title": "Open front home",
+      "description": "Integer quis elit blandit, placerat odio ut, consequat nunc. Duis porta ligula vel turpis fringilla tincidunt. Integer aliquam rutrum eros vitae cursus. Donec placerat lacus vel massa luctus mattis.",
+      "category": "Miscellaneous"
+		},
+    {
+      "image": "http://appseed.io.s3.amazonaws.com/mobile-apps/barebone-ionic-2/real-estate-minimal-image-4.jpg",
+      "title": "Grey futuristic office",
+      "description": "Suspendisse non velit vestibulum, pharetra risus vitae, porttitor tortor. Vestibulum nec euismod orci, sed convallis urna. Nunc pretium dolor massa, vitae interdum nulla gravida eu.",
+      "category": "Office"
+		}
+	]
+}

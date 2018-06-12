@@ -1,0 +1,20 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>{{image.title || 'Image'}}</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div class="image-wrapper">
+		<img src="{{image.url_m}}"/>
+	</div>
+
+	<div *ngIf="info">
+		<p>{{image.description._content}}</p>
+		<div>Views: <strong>{{info.views}}</strong></div>
+		<div>Comments: <strong>{{info.comments._content}}</strong></div>
+	</div>
+</ion-content>

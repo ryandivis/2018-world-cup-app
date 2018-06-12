@@ -1,0 +1,24 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Bar Chart</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<div style="display: block">
+		<canvas baseChart
+			[datasets]="barChartData"
+			[labels]="barChartLabels"
+			[options]="barChartOptions"
+			[legend]="barChartLegend"
+			[chartType]="barChartType"
+			(chartHover)="chartHovered($event)"
+			(chartClick)="chartClicked($event)"></canvas>
+	</div>
+	<button ion-button full (click)="randomize()">Update</button>
+
+</ion-content>

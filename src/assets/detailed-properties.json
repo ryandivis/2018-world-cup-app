@@ -1,0 +1,32 @@
+{
+	"result": [
+		{
+      "image": "http://appseed.io.s3.amazonaws.com/mobile-apps/barebone-ionic-2/real-estate-detailed-image-1.jpg",
+      "title": "1058 W Catalpa #3E Chicago, IL 60640",
+      "beds": 1,
+      "baths": 1,
+      "sqfeet": 800
+		},
+    {
+      "image": "http://appseed.io.s3.amazonaws.com/mobile-apps/barebone-ionic-2/real-estate-detailed-image-2.jpg",
+      "title": "5064 N Kimball Ave #4 Chicago, IL 60625",
+      "beds": 3,
+      "baths": 2,
+      "sqfeet": 2000
+		},
+    {
+      "image": "http://appseed.io.s3.amazonaws.com/mobile-apps/barebone-ionic-2/real-estate-detailed-image-3.jpg",
+      "title": "333 W Barry Ave Chicago, IL 60657",
+      "beds": 5,
+      "baths": 4.5,
+      "sqfeet": 6365
+		},
+    {
+      "image": "http://appseed.io.s3.amazonaws.com/mobile-apps/barebone-ionic-2/real-estate-detailed-image-4.jpg",
+      "title": "331 S Peoria St #103 Chicago, IL 60607",
+      "beds": 2,
+      "baths": 2,
+      "sqfeet": 1450
+		}
+	]
+}

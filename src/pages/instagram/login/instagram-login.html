@@ -1,0 +1,37 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Instagram</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list>
+		<ion-item text-wrap *ngIf="!accessToken">
+			<p>Login with your <strong>Instagram account</strong>.</p>
+			<p>The application will pull from <strong>Instagram</strong> and will display your <strong>recent
+				posts</strong>.</p>
+		</ion-item>
+	</ion-list>
+	<ion-card *ngIf="!!isAuthorized">
+		<ion-card-header>
+			Access Token
+		</ion-card-header>
+		<ion-card-content text-wrap>
+			{{accessToken || 'Not authorized'}}
+		</ion-card-content>
+	</ion-card>
+	<p>
+		<button ion-button block color="secondary" (click)="login()" *ngIf="!isAuthorized">Login</button>
+	</p>
+	<p>
+		<button ion-button block color="secondary" (click)="showRecentMedia()" *ngIf="!!isAuthorized">Show Recent
+			posts/media
+		</button>
+	</p>
+	<p>
+		<button ion-button block color="secondary" (click)="logout()" *ngIf="!!isAuthorized">Logout</button>
+	</p>
+</ion-content>

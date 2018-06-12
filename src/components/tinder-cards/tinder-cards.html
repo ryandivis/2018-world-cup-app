@@ -1,0 +1,30 @@
+<div id="card-stack" swing-stack #myswing1
+	[stackConfig]="stackConfig" (throwoutleft)="onVoteUp(true)" (throwoutright)="onVoteUp(false)">
+	<ion-card #mycards1 swing-card *ngFor="let card of cards">
+		<ion-item>
+			<ion-avatar item-left>
+				<img *ngIf="card.picture" [src]="card.picture.medium">
+			</ion-avatar>
+			<h2>{{ card.name.first }} {{ card.name.last}}</h2>
+			<p>{{ card.email }}</p>
+		</ion-item>
+
+		<ion-card-content *ngIf="card.location">
+			From: {{ card.location.city }}, {{ card.location.postcode }}<br>
+			Phone: {{ card.phone }}
+		</ion-card-content>
+
+		<ion-row>
+			<ion-col>
+				<button ion-button primary clear (click)="onVoteUp(true)">
+					<ion-icon name="thumbs-up"></ion-icon>
+				</button>
+			</ion-col>
+			<ion-col>
+				<button ion-button primary clear (click)="onVoteUp(false)">
+					<ion-icon name="thumbs-down"></ion-icon>
+				</button>
+			</ion-col>
+		</ion-row>
+	</ion-card>
+</div>

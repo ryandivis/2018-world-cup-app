@@ -1,0 +1,47 @@
+<ion-split-pane>
+
+  <ion-menu id="leftMenu" type="overlay" [content]="content">
+
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content [menuClose]="wide">
+      <ion-list>
+        <ion-item-divider *ngIf="auth.getEmail()">{{ auth.getDisplayName() }} <br/> {{ auth.getEmail() }}</ion-item-divider>
+        <ion-item (click)="logout()" *ngIf="auth.authenticated">
+          <i class="fa fa-sign-out"></i>
+          Log out
+        </ion-item>
+        <ion-item (click)="login()" *ngIf="!auth.authenticated">
+          <ion-icon name="log-in" item-left></ion-icon>
+          Log in
+        </ion-item>
+        <ion-item-divider>
+          World Cup
+        </ion-item-divider>
+        <ion-item (click)="openPage(homePage)">
+          <i class="fa fa-fort-awesome"></i>
+          {{homePage.title}}
+        </ion-item>
+        <!-- <ion-item (click)="openPage(groupsPage)">
+          <i class="fa fa-soccer-ball-o"></i>
+          Groups
+        </ion-item>
+        <ion-item (click)="openPage(matchesPage)">
+          <i class="fa fa-soccer-ball-o"></i>
+          Matches
+        </ion-item> -->
+        <ion-item (click)="openPage(awardsPage)">
+          <i class="fa fa-trophy"></i>
+          Awards
+        </ion-item>
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+
+  <ion-nav id="nav" [root]="rootPage" main #content swipe-back-enabled="false"></ion-nav>
+</ion-split-pane>

@@ -1,0 +1,31 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Line Chart</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div style="display: block;">
+		<canvas baseChart width="400" height="400"
+			[datasets]="lineChartData"
+			[labels]="lineChartLabels"
+			[options]="lineChartOptions"
+			[colors]="lineChartColors"
+			[legend]="lineChartLegend"
+			[chartType]="lineChartType"
+			(chartHover)="chartHovered($event)"
+			(chartClick)="chartClicked($event)"></canvas>
+	</div>
+	<table class="table table-responsive table-condensed">
+		<tr>
+			<th *ngFor="let label of lineChartLabels"></th>
+		</tr>
+		<tr *ngFor="let d of lineChartData">
+			<td *ngFor="let label of lineChartLabels; let j=index"></td>
+		</tr>
+	</table>
+	<button ion-button full (click)="randomize()">Update</button>
+</ion-content>

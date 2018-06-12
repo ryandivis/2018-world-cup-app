@@ -1,0 +1,12 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Tinder cards</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+	<tinder-cards [cards]="cards" (voteUp)="voteUp($event)"></tinder-cards>
+</ion-content>

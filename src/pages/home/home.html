@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item text-wrap>
+    <h2>Welcome the We Remember World Cup App</h2>
+  </ion-item>
+  <button ion-button (click)="viewGroups()" block>My Group Picks</button>
+  <button ion-button (click)="viewMatches()" block>My Match Picks</button>
+  <ion-card>
+    <ion-card-header>Players</ion-card-header>
+    <ion-card-content>
+      <ion-row>
+        <ion-col>Name</ion-col>
+        <ion-col>Points</ion-col>
+        <ion-col>Groups</ion-col>
+        <ion-col>Matches</ion-col>
+      </ion-row>
+      <ion-row *ngFor="let user of users | async">
+        <ion-col>{{ user.name }}</ion-col>
+        <ion-col>{{ user.points || 0 }}</ion-col>
+        <ion-col>
+          <a (click)="viewGroups(user)">View</a>
+        </ion-col>
+        <ion-col>
+          <a (click)="viewMatches(user)">View</a>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

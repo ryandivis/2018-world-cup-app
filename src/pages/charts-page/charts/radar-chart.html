@@ -1,0 +1,19 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Radar Chart</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div style="display: block">
+		<canvas baseChart
+			[datasets]="radarChartData"
+			[labels]="radarChartLabels"
+			[chartType]="radarChartType"
+			(chartHover)="chartHovered($event)"
+			(chartClick)="chartClicked($event)"></canvas>
+	</div>
+</ion-content>

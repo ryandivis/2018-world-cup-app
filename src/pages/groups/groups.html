@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">Close</button>
+    </ion-buttons>
+    <ion-title>Groups</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <button *ngIf="isCurrentUser()" ion-button block color="secondary" (click)="makeSelection()">Save</button>
+  <ion-item text-wrap>
+    <h2>Rules</h2>
+    <p>Rearrange the group teams so the teams you believe will make it out of groups are on top. Each correct pick is worth 2 pts. If you also correctly select which position a team advances in (1st or 2nd) you are awarded an additional point. All group entries must be submitted before the first game (Russia vs Saudi Arabia June 14th at 9:00am MDT).</p>
+  </ion-item>
+  <ion-card *ngFor="let group of groups">
+    <ion-card-header>
+      {{ group.name }}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list reorder="{{canChange()}}" (ionItemReorder)="reorderItems(group, $event)">
+        <ion-item *ngFor="let team of group.teams; let i = index;">
+          <ion-icon name="checkbox" *ngIf="i === 0 || i === 1"></ion-icon>
+          {{ team }}
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <button *ngIf="isCurrentUser()" ion-button block color="secondary" (click)="makeSelection()">Save</button>
+</ion-content>

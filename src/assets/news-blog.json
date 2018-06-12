@@ -1,0 +1,25 @@
+{
+	"result": [
+		{
+			"image": "http://appseed.io.s3.amazonaws.com/mobile-apps/barebone-ionic-2/news-blog-image-1.jpg",
+			"title": "Web Design for Color Blind Users",
+      "tags": "SPONSORED, WEB DESIGN",
+      "date": "NOV 07, 2016",
+			"body": "If you are not color blind, chances are you don’t think about this problem very often. People who live with colorblindness, on the other hand, have to think about it all the time. Before we get into ways for web designers to create better websites for color blind users, let’s spend a little time understanding color blindness better."
+		},
+		{
+			"image": "http://appseed.io.s3.amazonaws.com/mobile-apps/barebone-ionic-2/news-blog-image-2.jpg",
+			"title": "6 Tips for Designing Stickers and Labels",
+      "tags": "FEATURED, RESOURCES",
+      "date": "NOV 06, 2016",
+			"body": "Stickers or labels you’ve designed can be a great addition to your portfolio. Labels are a prominent part of package design – a growing industry. Stickers are a great tool used for promoting businesses, products, events and even people. Designing custom stickers and labels is very similar to designing for traditional print, with a few mall changes."
+		},
+		{
+			"image": "http://appseed.io.s3.amazonaws.com/mobile-apps/barebone-ionic-2/news-blog-image-3.jpg",
+			"title": "Important Concepts That Every Icon Designer Needs To Know",
+      "tags": "ICONS, WEB DESIGN",
+      "date": "OCT 10, 2016",
+			"body": "Digital design has become a popular trade which almost anyone can learn. But digital design is an umbrella term which includes all sorts of work like advertising banners, website layouts, motion graphics and of course icon design. While many of these practices have overlapping techniques they all tend to rely on varying skillsets."
+		}
+	]
+}

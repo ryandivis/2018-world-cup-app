@@ -1,0 +1,25 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Article</ion-title>
+
+		<ion-buttons end>
+			<button ion-button icon-right clear icon-only (click)="showActions()" class="actionBtn">
+				<ion-icon name="flash"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div>
+		<h2>{{article.title}}</h2>
+		<p class="postby">
+			<span>{{article.publishedDate | localDate}}</span> - <span [innerHtml]="article.author"></span>
+		</p>
+		<p [innerHtml]="article.content"></p>
+		<p class="categories">[{{article.categories.join(", ")}}]</p>
+		<button ion-button block color="secondary" (click)="showInBrowser()">
+			Show in browser
+		</button>
+	</div>
+</ion-content>

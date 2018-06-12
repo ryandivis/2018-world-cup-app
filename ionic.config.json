@@ -1,0 +1,8 @@
+{
+  "name": "barebone-ionic-2",
+  "app_id": "df7a6d96",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

@@ -1,0 +1,20 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Polar Area Chart</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div style="display: block">
+		<canvas baseChart
+			[data]="polarAreaChartData"
+			[labels]="polarAreaChartLabels"
+			[legend]="polarAreaLegend"
+			[chartType]="polarAreaChartType"
+			(chartHover)="chartHovered($event)"
+			(chartClick)="chartClicked($event)"></canvas>
+	</div>
+</ion-content>

@@ -1,0 +1,20 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Photo stream</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-grid>
+		<ion-row *ngFor="let pictures of groupedPictures">
+			<ion-col *ngFor="let picture of pictures">
+				<ion-card (click)="navigateToFullGalleryView(picture)">
+					<img class="preview" src="{{picture.url_s}}"/>
+				</ion-card>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

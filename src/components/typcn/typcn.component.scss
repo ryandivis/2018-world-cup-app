@@ -1,0 +1,72 @@
+// Color icons
+
+@mixin typcn-color($color-name, $color) {
+	.typcn-ios-#{$color-name} {
+		color: $color;
+	}
+	.typcn-md-#{$color-name} {
+		color: $color;
+	}
+	.typcn-wp-#{$color-name} {
+		color: $color;
+	}
+}
+
+@each $color-name, $color-base, $color-contrast in get-colors($colors) {
+	@include typcn-color($color-name, $color-base);
+}
+
+// Icons and buttons
+
+@mixin button-icon {
+	font-size: 1.3em;
+
+	pointer-events: none;
+}
+
+[icon-left] typcn {
+	@include button-icon;
+
+	@include padding-horizontal(null, .3em);
+}
+
+[icon-right] typcn {
+	@include button-icon;
+
+	@include padding-horizontal(.4em, null);
+}
+
+[icon-only] typcn {
+	@include padding(0, .5em);
+
+	font-size: 1.8em;
+	line-height: .67;
+
+	pointer-events: none;
+}
+
+typcn {
+	display: inline-block;
+
+	&.typcn-lg {
+		font-size: 1.33333333em;
+		line-height: 0.75em;
+		vertical-align: -15%;
+	}
+	&.typcn-2x {
+		font-size: 2em;
+	}
+	&.typcn-3x {
+		font-size: 3em;
+	}
+	&.typcn-4x {
+		font-size: 4em;
+	}
+	&.typcn-5x {
+		font-size: 5em;
+	}
+	&.typcn-fw {
+		width: 1.28571429em;
+		text-align: center;
+	}
+}

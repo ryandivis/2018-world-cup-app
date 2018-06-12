@@ -1,0 +1,25 @@
+{
+	"result": [
+		{
+			"thumb": "http://appseed.io.s3.amazonaws.com/mobile-apps/barebone-ionic-2/news-list-image-1.jpg",
+			"title": "Why Your Agency Experience is Perfect for Startups",
+      "posted_by": "Chris Thurman",
+      "date": "Nov 07, 2016",
+			"body": "You always thought you’d be doing something that had an impact on consumers. Clearly, writing Facebook posts for a cheese client wasn’t what you had in mind when you envisioned your career at a marketing agency. So you’ve realized it’s time to do something else. The good news is, your skills are not at all limited to agency life. In fact, they are very applicable to the startup world."
+		},
+		{
+			"thumb": "http://appseed.io.s3.amazonaws.com/mobile-apps/barebone-ionic-2/news-list-image-2.jpg",
+			"title": "How to Balance a Startup With Parenthood",
+      "posted_by": "Apollo Sinkevicious",
+      "date": "Nov 06, 2016",
+			"body": "A look at balancing parenthood with the demanding schedule of a startup."
+		},
+		{
+			"thumb": "http://appseed.io.s3.amazonaws.com/mobile-apps/barebone-ionic-2/news-list-image-3.jpg",
+			"title": "The Internet of Islands",
+      "posted_by": "Zach Dunn",
+      "date": "Sep 11, 2016",
+			"body": "Hardware fragmentation, crowdfunding, and an exercise in modern-day bridge building."
+		}
+	]
+}

@@ -1,0 +1,35 @@
+<ion-header>
+
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Full Calendar</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<div *ngIf="calendarOptions">
+		<ng-fullcalendar #ucCalendar
+			[options]="calendarOptions"
+			(eventClick)="eventClick($event.detail)"
+			(eventDrop)="updateEvent($event.detail)"
+			(viewRender)="viewRender($event.detail)"
+			(initialized)="initialized()"
+			(eventRender)="eventRender($event.detail)"
+			(select)="select($event.detail)"
+			(unselect)="unselect($event.detail)"
+			(eventResize)="updateEvent($event.detail)"
+			(clickButton)="clickButton($event.detail)"
+			(windowResize)="windowResize($event.detail)"
+			[(eventsModel)]="events"></ng-fullcalendar>
+	</div>
+
+	<div padding-vertical>
+		<p>Navigate to May, 2018 for sample events.</p>
+		<button ion-button full color="secondary" (click)="loadAgain()">Load events</button>
+		<button ion-button full (click)="clearEvents()">Clear events</button>
+	</div>
+</ion-content>

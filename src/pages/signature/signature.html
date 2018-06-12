@@ -1,0 +1,23 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Signature</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+
+	<div padding>
+		<p>Please draw your Signature and select "Submit".</p>
+	</div>
+	<div [ngClass]="{'drawing-active': isDrawing}">
+		<signature-pad [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>
+	</div>
+
+	<div padding>
+		<button ion-button full color="primary" (click)="submit()">Submit</button>
+		<button ion-button full color="danger" (click)="clearPad()">Clear</button>
+	</div>
+</ion-content>

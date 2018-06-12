@@ -1,0 +1,27 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Galleries</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-card *ngFor="let gallery of galleries">
+		<ion-item>
+			<ion-avatar item-left>
+				<img src="{{gallery.teaser}}">
+			</ion-avatar>
+			<h2>{{gallery.title}}</h2>
+			<p>{{gallery.location}}</p>
+		</ion-item>
+		<img src="{{gallery.teaser}}">
+		<ion-card-content>
+			<a (click)="goToGallery(gallery.id)">
+				<ion-icon name="arrow-round-forward"></ion-icon>
+				Read more
+			</a>
+		</ion-card-content>
+	</ion-card>
+</ion-content>
