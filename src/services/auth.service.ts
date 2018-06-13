@@ -30,7 +30,24 @@ export class AuthService {
   }
 
   signUp(credentials) {
-    return this.afAuth.auth.createUserWithEmailAndPassword(credentials.email, credentials.password);
+    return this.afAuth.auth.createUserWithEmailAndPassword(credentials.email, credentials.password).then(data => {
+      const signedUpuser = data;
+      this.currentUser = this.afs.doc('users/' + signedUpuser['uid']);
+      this.currentUser.valueChanges().subscribe(data => {
+        if (!data) {
+          this.afs.collection('users').doc(signedUpuser['uid']).set({
+            name: credentials.name,
+            email: credentials.email
+          }, { merge: true });
+        } else {
+          this.currentUser.update({
+            id: signedUpuser['uid'],
+            name: credentials.name,
+            email: credentials.email
+          })
+        }
+      });
+    });;
   }
 
   get authenticated(): boolean {
@@ -69,7 +86,7 @@ export class AuthService {
         this.afs.collection('users').doc(self.user.uid).set({
           name: self.user['displayName'],
           email: self.user['email']
-        });
+        }, { merge: true });
       } else {
         this.currentUser.update({
           id: self.user['uid'],
